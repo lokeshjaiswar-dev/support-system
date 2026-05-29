@@ -9,6 +9,8 @@ const router = express.Router();
 //   const statuses = await db.all('SELECT id, name FROM statuses ORDER BY id');
 //   res.json(statuses);
 // });
+
+
 router.get('/',  async (req, res) => {
   const statuses = await db.all('SELECT id, name FROM statuses ORDER BY id');
   res.json(statuses);
