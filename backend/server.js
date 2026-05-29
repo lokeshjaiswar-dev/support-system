@@ -24,6 +24,9 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/tickets', ticketRoutes);
 app.use('/api/statuses', statusRoutes);
+app.get('/test', (req,res) => {
+  res.send("Api Working")
+})
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'public')));
