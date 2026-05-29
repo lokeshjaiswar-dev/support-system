@@ -29,7 +29,7 @@ app.use('/api/statuses', statusRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Any non-API request sends the React app
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
